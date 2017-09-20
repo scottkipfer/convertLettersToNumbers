@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+    <head>
+        <meta charset="utf-8">
+        <title>Convert Letters To Numbers Filter</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- ui-mask files -->
+        <script src="../dist/convertLettersToNumbers.min.js"></script>
+    </head>
+    <body class="container">
+        <script>
+            angular.module('demo', ['convertLettersToNumbers']);
+        </script>
+        <div class="page-header">
+            <h1>Convert Letters To Numbers Filter
+            </h1>
+        </div>
+        <div>
+            <span><b>input: </b></span><input name="input" id="input" ng-model="userInput">
+            <span style="margin-left:30px;"><b>output: </b>{{userInput | convertLettersToNumbers}}</span>
+        </div>
+    </body>
+</html>
